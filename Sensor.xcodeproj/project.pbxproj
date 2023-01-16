@@ -13,6 +13,7 @@
 		03D5380D29742C48009B166B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D5380B29742C48009B166B /* Main.storyboard */; };
 		03D5380F29742C49009B166B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03D5380E29742C49009B166B /* Assets.xcassets */; };
 		03D5381229742C49009B166B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03D5381029742C49009B166B /* LaunchScreen.storyboard */; };
+		E2083C4B39156319FDEAB915 /* Pods_Sensor.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F05FD383116EF3DB353102 /* Pods_Sensor.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		03D5380E29742C49009B166B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		03D5381129742C49009B166B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		03D5381329742C49009B166B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41F05FD383116EF3DB353102 /* Pods_Sensor.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Sensor.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5356C845BDF51FDB217C2C20 /* Pods-Sensor.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sensor.debug.xcconfig"; path = "Target Support Files/Pods-Sensor/Pods-Sensor.debug.xcconfig"; sourceTree = "<group>"; };
+		7882CC81E31888FFEAB08623 /* Pods-Sensor.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Sensor.release.xcconfig"; path = "Target Support Files/Pods-Sensor/Pods-Sensor.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E2083C4B39156319FDEAB915 /* Pods_Sensor.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				03D5380429742C48009B166B /* Sensor */,
 				03D5380329742C48009B166B /* Products */,
+				DA24FB8908EC145DE7EF77F6 /* Pods */,
+				0E25E7E756B665604A50DEB2 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,23 @@
 			path = Sensor;
 			sourceTree = "<group>";
 		};
+		0E25E7E756B665604A50DEB2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				41F05FD383116EF3DB353102 /* Pods_Sensor.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		DA24FB8908EC145DE7EF77F6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5356C845BDF51FDB217C2C20 /* Pods-Sensor.debug.xcconfig */,
+				7882CC81E31888FFEAB08623 /* Pods-Sensor.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +98,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03D5381629742C49009B166B /* Build configuration list for PBXNativeTarget "Sensor" */;
 			buildPhases = (
+				4EE67A759F343AE5A2B2C9C6 /* [CP] Check Pods Manifest.lock */,
 				03D537FE29742C48009B166B /* Sources */,
 				03D537FF29742C48009B166B /* Frameworks */,
 				03D5380029742C48009B166B /* Resources */,
+				924404F3358BA7F7313FE6E8 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -132,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4EE67A759F343AE5A2B2C9C6 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Sensor-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		924404F3358BA7F7313FE6E8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sensor/Pods-Sensor-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Sensor/Pods-Sensor-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Sensor/Pods-Sensor-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		03D537FE29742C48009B166B /* Sources */ = {
@@ -282,6 +350,7 @@
 		};
 		03D5381729742C49009B166B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5356C845BDF51FDB217C2C20 /* Pods-Sensor.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -310,6 +379,7 @@
 		};
 		03D5381829742C49009B166B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7882CC81E31888FFEAB08623 /* Pods-Sensor.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
